@@ -1,0 +1,84 @@
+/* =====================================================================
+   variables.css — Design Tokens de "El Trigal Dorado"
+   Sistema de Procesamiento de Transacciones · UNEFA 2026
+   ===================================================================== */
+
+/* ─── Google Fonts ──────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ─── Paleta Corporativa ─────────────────────────────────────────────── */
+:root {
+  /* Colores principales */
+  --color-primary:       #D4AF37;   /* Dorado Trigo — botones CTA, énfasis */
+  --color-primary-dark:  #B8941F;   /* Dorado oscuro — hover de botones */
+  --color-primary-light: #F0D060;   /* Dorado claro — gradientes */
+  --color-primary-glow:  rgba(212, 175, 55, 0.25);
+
+  --color-secondary:     #4A3018;   /* Marrón Cacao — textos, bordes */
+  --color-secondary-mid: #7A5A30;   /* Marrón medio — textos secundarios */
+  --color-secondary-light:#C8A878;  /* Marrón claro — acentos sutiles */
+
+  --color-bg:            #F8F9FA;   /* Blanco Harina — canvas principal */
+  --color-bg-warm:       #FDF6E3;   /* Crema cálida — cards del catálogo */
+  --color-bg-dark:       #1C1209;   /* Fondo oscuro — footer, nav dark */
+  --color-bg-dark-mid:   #2D1E0F;   /* Dark mid — sidebar admin */
+
+  /* Colores funcionales */
+  --color-success:       #2ECC71;
+  --color-danger:        #E74C3C;
+  --color-warning:       #F39C12;
+  --color-info:          #3498DB;
+  --color-text:          #2C1A0E;
+  --color-text-muted:    #7A7063;
+  --color-border:        rgba(74, 48, 24, 0.12);
+
+  /* ─── Tipografías ─────────────────────────────────────────────────── */
+  --font-public:  'Merriweather', Georgia, serif;
+  --font-admin:   'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ─── Espaciado (escala base 8px) ─────────────────────────────────── */
+  --space-xs:    4px;
+  --space-sm:    8px;
+  --space-md:    16px;
+  --space-lg:    24px;
+  --space-xl:    40px;
+  --space-2xl:   64px;
+  --space-3xl:   96px;
+
+  /* ─── Border Radius ────────────────────────────────────────────────── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
+  --radius-pill: 999px;
+
+  /* ─── Sombras (suaves, tono cacao) ─────────────────────────────────── */
+  --shadow-xs:   0 2px 4px rgba(74, 48, 24, 0.06);
+  --shadow-sm:   0 4px 12px rgba(74, 48, 24, 0.08);
+  --shadow-md:   0 10px 30px rgba(74, 48, 24, 0.10);
+  --shadow-lg:   0 20px 50px rgba(74, 48, 24, 0.14);
+  --shadow-xl:   0 40px 80px rgba(74, 48, 24, 0.18);
+  --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.35);
+  --shadow-card: 0 10px 30px rgba(74, 48, 24, 0.08), 0 1px 4px rgba(74, 48, 24, 0.04);
+
+  /* ─── Transiciones (curvas Bézier físicas) ──────────────────────────── */
+  --transition-fast:   all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-mid:    all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow:   all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);  /* Efecto spring */
+  --transition-ease:   all 0.3s ease-in-out;
+
+  /* ─── Z-index ──────────────────────────────────────────────────────── */
+  --z-base:    1;
+  --z-card:    10;
+  --z-sticky:  100;
+  --z-overlay: 500;
+  --z-modal:   900;
+  --z-toast:   1000;
+
+  /* ─── Tamaños del layout ────────────────────────────────────────────── */
+  --nav-height:      72px;
+  --sidebar-width:   260px;
+  --sidebar-collapsed: 72px;
+  --container-max:   1280px;
+}
