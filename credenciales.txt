@@ -1,0 +1,10 @@
+CREDENCIAES DE ACCESO AL SISTEMA "EL TRIGAL DORADO"
+===================================================
+
+[ ADMINISTRADOR ]
+Cédula de Identidad (Usuario): V-27123456
+Contraseña: password123
+
+URL de acceso: http://localhost/dorado/public/?page=Login
+
+* NOTA: Estas credenciales tienen acceso total al panel TPS (Inventario, Productos, Pedidos y Sistema).
