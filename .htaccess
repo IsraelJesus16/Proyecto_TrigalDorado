@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si la URL de la petición no empieza por /public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    
+    # Redirige todo el tráfico silenciosamente a la carpeta public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
