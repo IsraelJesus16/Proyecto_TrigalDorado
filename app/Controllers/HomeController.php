@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['peticion'])) {
         echo json_encode([
             'resultado'       => 200,
             'autenticado'     => Helper::estaAutenticado(),
+            'usuario'         => $_SESSION['usuario'] ?? null,
             'csrf_token'      => $_SESSION['csrf_token'] ?? '',
         ]);
         exit;

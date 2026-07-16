@@ -85,8 +85,11 @@ export const initCarrito = () => {
         btn.disabled = true;
 
         try {
-            const { crearPedido } = await import('./api.js');
-            const res = await crearPedido({ items });
+            const { verificarSesion, crearPedido } = await import('./api.js');
+            const sesion = await verificarSesion();
+            const cedulaCliente = sesion.usuario?.cedula || '';
+
+            const res = await crearPedido({ items, cedulaCliente });
 
             if (res.resultado === 200) {
                 mostrarToast('✅ ' + (res.mensaje || 'Pedido registrado exitosamente'), 'success', 5000);

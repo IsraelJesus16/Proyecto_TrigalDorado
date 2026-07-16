@@ -173,6 +173,17 @@ class Pedido extends Database
             // ── CALCULAR TOTALES ─────────────────────────────────────
             $total = max(0.0, $subtotal - $this->descuento);
 
+            // ── VERIFICAR QUE EL CLIENTE EXISTA EN LA TABLA CLIENTE ──
+            $stmCli = $pdo->prepare("SELECT cedula FROM cliente WHERE cedula = :c LIMIT 1");
+            $stmCli->execute([':c' => $this->cedula_cliente]);
+            if ($stmCli->rowCount() === 0) {
+                // Si el usuario registrado no estaba en la tabla cliente, lo insertamos
+                $pdo->prepare(
+                    "INSERT INTO cliente (cedula, tipo_cliente, limite_credito, condicion_pago, estatus)
+                     VALUES (:c, 'NATURAL', 0, 'CONTADO', 1)"
+                )->execute([':c' => $this->cedula_cliente]);
+            }
+
             // ── INSERTAR CABECERA DEL PEDIDO ─────────────────────────
             $pdo->prepare(
                 "INSERT INTO pedido
